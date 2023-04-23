@@ -1,0 +1,70 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+
+
+
+	<!-- properties details -->
+	<div class="properties-details segments-page">
+		<div class="container">
+			<div class="content-image">
+				<img src="{{ listing.image.url }}" alt="">
+			</div>
+			<div class="content-desc">				
+				<h3>{{ listing.title }}</h3>
+                <p>Address: {{ listing.address }}</p><br />
+				<p>{{ listing.description }}</p>
+                <div class="wrap-title">
+					<h5>${{ listing.price }}</h5>
+				</div>
+			</div>
+			<div class="content-features features">
+				
+				
+			</div>
+			<div class="content-gallery">
+				<div class="wrap-title">
+					<h5>Gallery</h5>
+				</div>
+				<div class="row">
+					<div class="col s6">
+						<div class="content">
+							<a href="images/gallery1.jpg" data-lightbox="gallery-image"><img src="images/gallery1.jpg" alt=""></a>
+						</div>
+					</div>
+					<div class="col s6">
+						<div class="content">
+							<a href="images/gallery2.jpg" data-lightbox="gallery-image"><img src="images/gallery2.jpg" alt=""></a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12">
+						<div class="content">
+							<a href="images/gallery3.jpg" data-lightbox="gallery-image"><img src="images/gallery3.jpg" alt=""></a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s8">
+						<div class="content">
+							<a href="images/gallery4.jpg" data-lightbox="gallery-image"><img src="images/gallery4.jpg" alt=""></a>
+						</div>
+					</div>
+					<div class="col s4">
+						<div class="content">
+							<a href="images/gallery5.jpg" data-lightbox="gallery-image"><img src="images/gallery5.jpg" alt=""></a>
+						</div>
+						<div class="content plus-mt">
+							<a href="images/gallery6.jpg" data-lightbox="gallery-image"><img src="images/gallery6.jpg" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end properties details -->
+
+{% endblock content %}

@@ -1,0 +1,175 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+
+
+	<!-- slider -->
+	<div class="container">
+		<div class="slide">
+			<div class="slider-slide owl-carousel owl-theme">
+				<div class="content">
+					<div class="mask"></div>
+					<img src="{% static 'images/house (1).jpg' %}" alt="">
+					<div class="slider-caption">
+						<span>WELCOME TO</span>
+						<h2>KINGSLEY REALTOR</h2>
+						<p>Home of beautiful listings at reasonable prices</p>
+					</div>
+				</div>
+				<div class="content">
+					<div class="mask2"></div>
+					<img src="{% static 'images/house (2).jpg' %}" alt="">
+					<div class="slider-caption">
+						<span>WELCOME TO</span>
+						<h2>KINGSLEY REALTOR</h2>
+						<p>Home of beautiful listings at reasonable prices</p>
+					</div>
+				</div>
+				<div class="content">
+					<div class="mask"></div>
+					<img src="{% static 'images/house (3).jpg' %}" alt="">
+					<div class="slider-caption">
+						<span>WELCOME TO</span>
+						<h2>KINGSLEY REALTOR</h2>
+						<p>Home of beautiful listings at reasonable prices</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div class="features segments">
+		<div class="container">
+			<div class="row">
+				<div class="col s6">
+					<div class="content">
+						<i class="fas fa-desktop"></i>
+						<h6>Clean</h6>
+					</div>
+				</div>
+				<div class="col s6">
+					<div class="content">
+						<i class="fas fa-chart-area"></i>
+						<h6>Marketing</h6>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s6">
+					<div class="content">
+						<i class="fas fa-star"></i>
+						<h6>Update</h6>
+					</div>
+				</div>
+				<div class="col s6">
+					<div class="content">
+						<i class="fas fa-phone"></i>
+						<h6>Support</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end features -->
+
+	<!-- best properties 
+	<div class="best-properties segments bg-second">
+		<div class="container">
+			<div class="section-title">
+				<h3>BEST PROPERTIES</h3>
+			</div>
+			<div class="row">
+				<div class="col s6">
+					<div class="content">
+						<div class="image">
+							<img src="{% static 'images/property1.jpg' %}" alt="">
+							<div class="info-price">
+								<span>$128.00</span>
+							</div>
+						</div>
+						<div class="text">
+							<a href="properties-details.html"><h5>Traditional Home</h5></a>
+							<span>FOR RENT</span>
+							<p><i class="fas fa-map-marker-alt"></i>Ipsum Street, 430</p>
+						</div>
+					</div>
+				</div>
+				<div class="col s6">
+					<div class="content">
+						<div class="image">
+							<img src="{% static 'images/property2.jpg' %}" alt="">
+							<div class="info-price">
+								<span>$213.00</span>
+							</div>
+						</div>
+						<div class="text">
+							<a href="properties-details.html"><h5>Luxury Home</h5></a>
+							<span>FOR SALE</span>
+							<p><i class="fas fa-map-marker-alt"></i>Ipsum Street, 430</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s6">
+					<div class="content">
+						<div class="image">
+							<img src="{% static 'images/property3.jpg' %}" alt="">
+							<div class="info-price">
+								<span>$128.00</span>
+							</div>
+						</div>
+						<div class="text">
+							<a href="properties-details.html"><h5>Natural Home</h5></a>
+							<span>FOR RENT</span>
+							<p><i class="fas fa-map-marker-alt"></i>Ipsum Street, 430</p>
+						</div>
+					</div>
+				</div>
+				<div class="col s6">
+					<div class="content">
+						<div class="image">
+							<img src="{% static 'images/property4.jpg' %}" alt="">
+							<div class="info-price">
+								<span>$213.00</span>
+							</div>
+						</div>
+						<div class="text">
+							<a href="properties-details.html"><h5>Modern Home</h5></a>
+							<span>FOR SALE</span>
+							<p><i class="fas fa-map-marker-alt"></i>Ipsum Street, 430</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	 end best properties -->
+
+	<!-- latest news -->
+	<div class="latest-news segments">
+		<div class="container">
+			<div class="section-title">
+				<h3>LATEST LISTINGS</h3>
+			</div>
+			{% for listing in listings %}
+			<div class="row">
+                
+				<div class="col s6">
+					<div class="content">
+						<img src="{{ listing.image.url }}" alt="">
+						<div class="text">
+							<a href="/listings/{{ listing.id}}/"><h5>{{ listing.title }}</h5></a>
+							<p>{{ listing.description|slice:"60"}}....</p>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	<!-- end latest news -->
+
+
+{% endblock content %}   

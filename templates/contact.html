@@ -1,0 +1,49 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+	<!-- agent details -->
+	<div class="agent-details segments-page">
+		<div class="container">
+			<div class="content-image">
+				<img src="{% static 'images/agent-details.jpg' %}" alt="">
+			</div>
+			<div class="content-title">
+				<h4>KINGSLEY Smith</h4>
+				<span>Agent</span>
+				<div class="wrap-social">
+					<ul>
+						<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+						<li><a href=""><i class="fab fa-instagram"></i></a></li>
+						<li><a href=""><i class="fab fa-google"></i></a></li>
+						<li><a href=""><i class="fab fa-twitter"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="content-info">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur officia eum magni alias sed nobis, vitae beatae expedita delectus eveniet.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum assumenda repellat cumque numquam perferendis eos, voluptatem. Alias modi a dolorum voluptate sed quo illo, ab consequatur nam voluptates commodi!</p>
+				<ul>
+					<li>List Properties <span>15</span></li>
+					<li>Address <span>Ipsum Street 10, Lorem</span></li>
+					<li>Phone <span>+1 234 5678</span></li>
+					<li>Email <span>mail@domain.com</span></li>
+					<li>Instagram <span>@Yourname</span></li>
+					<li>Twitter <span>@Yourname</span></li>
+				</ul>
+			</div>
+			<div class="wrap-form">
+				<div class="wrap-title">
+					<h5>Contact Agent</h5>
+				</div>
+				<form>
+					<input type="text" placeholder="Name">
+					<input type="email" placeholder="Email">
+					<textarea cols="30" rows="10" placeholder="Message"></textarea>
+					<button class="button">SEND MESSAGE</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- end agent details -->
+
+{% endblock content %}   
